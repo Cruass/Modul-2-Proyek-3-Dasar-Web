@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Profile Card</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header-profil">
+      <h1>Profil Interaktif</h1>
+      <button id="toggle-tema">Ganti Tema</button>
+    </header>
+
+    <main>
+      <div id="status-container">
+        <p id="status" data-state="idle">Menyiapkan data...</p>
+        <button id="coba-lagi" hidden>Coba Lagi</button>
+      </div>
+
+      <article id="profil-card" class="kartu" hidden>
+        <h2 id="profil-nama"></h2>
+        <button id="toggle-detail" aria-expanded="false">Lihat Detail</button>
+        <p id="profil-deskripsi" class="hidden"></p>
+      </article>
+
+      <section id="keterampilan-section" class="kartu" hidden>
+        <h3>Daftar Keterampilan</h3>
+        <ul id="daftar-keterampilan"></ul>
+
+        <hr>
+        
+        <form id="form-keterampilan">
+          <label for="input-keterampilan">Tambah Keterampilan Baru:</label>
+          <input type="text" id="input-keterampilan" placeholder="Ketik nama skill...">
+          <span id="error-keterampilan" class="error"></span>
+          <button type="submit" id="btn-tambah">Tambah Skill</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

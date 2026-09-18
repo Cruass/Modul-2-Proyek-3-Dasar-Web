@@ -1,0 +1,82 @@
+:root {
+  --bg-color: #f3f4f6;
+  --text-color: #1f2937;
+  --card-bg: #ffffff;
+  --border-color: #d1d5db;
+}
+
+body.dark-mode {
+  --bg-color: #111827;
+  --text-color: #f9fafb;
+  --card-bg: #1f2937;
+  --border-color: #374151;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  width: min(92%, 600px);
+  margin-inline: auto;
+  padding-block: 40px;
+}
+
+.header-profil {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kartu {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  margin-block: 16px;
+  border: 1px solid var(--border-color);
+}
+
+button, input {
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  display: block;
+  width: 100%;
+}
+
+button { cursor: pointer; background: #e5e7eb; color: #111827; }
+#toggle-tema { width: max-content; }
+
+.hidden { display: none; }
+.error { color: #b91c1c; display: block; min-height: 20px; margin-top: 4px; font-size: 0.9em; }
+[aria-invalid="true"] { outline: 2px solid #b91c1c; }
+
+/* Warna state */
+#status[data-state="loading"] { color: #1d4ed8; }
+#status[data-state="error"] { color: #b91c1c; }
+
+/* Desain List Keterampilan */
+ul { padding: 0; list-style: none; }
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid var(--border-color);
+}
+.btn-hapus {
+  width: auto;
+  margin: 0;
+  padding: 4px 8px;
+  background: #fee2e2;
+  color: #b91c1c;
+  border: none;
+  font-size: 0.8em;
+}
