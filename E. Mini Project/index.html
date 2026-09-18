@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Information - Layanan IT Mahasiswa</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav-container">
+      <div class="logo">Information</div>
+      
+      <button id="btn-menu" class="btn-menu" aria-expanded="false" aria-label="Buka navigasi">
+        ☰
+      </button>
+
+      <nav id="nav-menu" class="nav-menu hidden-mobile">
+        <a href="#beranda">Beranda</a>
+        <a href="#layanan">Layanan</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+
+      <button id="btn-tema" class="btn-tema">Ganti Tema</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="beranda" class="hero container">
+      <h1>Solusi IT Terintegrasi</h1>
+      <p>Layanan konsultasi dan pengerjaan proyek mahasiswa Teknik Informatika.</p>
+    </section>
+
+    <section id="layanan" class="container section-bg">
+      <h2>Layanan Kami</h2>
+      <div class="filter-container">
+        <label for="filter-layanan">Filter Kategori:</label>
+        <select id="filter-layanan">
+          <option value="semua">Semua Layanan</option>
+          <option value="software">Software Engineering</option>
+          <option value="infrastruktur">Infrastruktur & Jaringan</option>
+          <option value="data">Basis Data</option>
+        </select>
+      </div>
+      <div id="daftar-layanan" class="grid-layanan">
+      </div>
+    </section>
+
+    <section id="faq" class="container">
+      <h2>Pertanyaan Umum (FAQ)</h2>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">Bagaimana cara memesan layanan?</button>
+          <div class="accordion-content hidden">
+            <p>Silakan isi form kontak di bawah dengan detail proyek Anda.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">Apakah menerima instalasi LAN?</button>
+          <div class="accordion-content hidden">
+            <p>Ya, kami melayani penarikan kabel UTP dan konfigurasi switch layer 2.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak" class="container section-bg">
+      <h2>Hubungi Kami</h2>
+      <form id="form-kontak">
+        <div class="form-group">
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" name="nama">
+          <span id="error-nama" class="error-msg"></span>
+        </div>
+        <div class="form-group">
+          <label for="pesan">Pesan</label>
+          <textarea id="pesan" name="pesan" rows="4"></textarea>
+          <span id="error-pesan" class="error-msg"></span>
+        </div>
+        <button type="submit" class="btn-submit">Kirim Pesan</button>
+      </form>
+      <div id="status-pesan" class="status-msg hidden"></div>
+    </section>
+  </main>
+
+  <button id="btn-top" class="btn-top hidden" aria-label="Kembali ke atas">↑</button>
+
+</body>
+</html>
